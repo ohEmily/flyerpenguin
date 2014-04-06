@@ -22,6 +22,31 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+  <!-- aloha -->
+	<!-- load the jQuery and require.js libraries -->
+	  <script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/require.js"></script>
+	  <script type="text/javascript" src="http://cdn.aloha-editor.org/latest/lib/vendor/jquery-1.7.2.js"></script>
+
+	  <!-- load the Aloha Editor core and some plugins -->
+	  <script src="http://cdn.aloha-editor.org/latest/lib/aloha.js"
+						   data-aloha-plugins="common/ui,
+												common/format,
+												common/list,
+												common/link,
+												common/highlighteditables">
+	  </script>
+	   
+	  <!-- load the Aloha Editor CSS styles -->
+	  <link href="http://cdn.aloha-editor.org/latest/css/aloha.css" rel="stylesheet" type="text/css" />
+
+	  <!-- make all elements with class="editable" editable with Aloha Editor -->
+	  <script type="text/javascript">
+			 Aloha.ready( function() {
+					var $ = Aloha.jQuery;
+					$('.editable').aloha();
+			 });
+	  </script>
+  
 	</head>
 
 	<body>
@@ -80,11 +105,11 @@
 		<div id="overlay_wrapper" class="overlay_wrapper">
 			<div class="overlay">
 				<div class="flyer_main"> 
-					<div class="flyer_when"></div>
-					<div class="flyer_title"></div>
-          <div class="flyer_image"></div>
-					<div class="flyer_where"></div>
-					<div class="flyer_description"></div>
+					<div class="flyer_when editable"></div>
+					<div class="flyer_title editable"></div>
+					<div class="flyer_image"></div>
+					<div class="flyer_where editable"></div>
+					<div class="flyer_description editable"></div>
 				</div>
 			</div>
 		</div>

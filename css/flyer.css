@@ -1,0 +1,34 @@
+#flyer_main
+{
+	margin: 10%;
+}
+
+#flyer_title
+{
+	padding-left: 15%;
+	margin: 20px;
+	text-align: left;
+	font-size: 300%;
+	vertical-align:center;
+}
+
+#flyer_when_and_where
+{
+	text-align: right;
+	font-size: 180%;
+}
+
+#flyer_description
+{
+	margin: 20px, 0px;
+	font-size: 100%;
+	text-align: left;
+}
+
+@media print
+{
+	.no-print, .no-print *
+	{
+	display: none !important;
+	}
+}

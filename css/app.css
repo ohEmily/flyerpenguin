@@ -1,4 +1,19 @@
+#main
+{
+	margin-left:20%;
+	margin-right:20%;
+}
 
+#header
+{
+  text-align:center;
+  margin: 20px;
+}
+
+#logo
+{
+  width:30%;
+}
 
 /** Form elements */
 #myform

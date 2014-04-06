@@ -7,12 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>flyerpenguin - instantly make flyers for your Facebook events</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+	<link href="css/app.css" rel="stylesheet">
     <link href="css/sticky-footer.css" rel="stylesheet">
 
   </head>
@@ -21,19 +22,21 @@
     <div id="header">
         <img id="logo" src="images/penguin_500px.png">
     </div>
-
-
-<form id="myform"> 
-	<input type="email" name="email" class="form_elements" placeholder=".edu email address"><br>
-	<input type="password" name="password" class="form_elements" placeholder="password"><br>
-	<input type="submit" value="log in" class="mybutton form_elements">
-</form>
-
+	
+	<div id="main">
+		<form id="myform"> 
+			<input id="url" type="email" name="url" class="form_elements" placeholder="paste in your Facebook event's web address"><br>
+			<input type="submit" onclick="submit()" value="generate" class="mybutton form_elements">
+		</form>
+	</div>
+		
     <div id="footer">
         <div class="container">
     		<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
         </div>
     </div>
+	
+	<span id="text"></span>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>

@@ -40,7 +40,7 @@ body.flyer{
 {
 	.no-print, .no-print *
 	{
-	display: none !important;
+		display: none !important;
 	}
 }
 

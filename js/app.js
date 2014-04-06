@@ -35,31 +35,32 @@ function create_overlay(fb_event)
 
 
 
-$(document).ready(function() {
+$(document).ready(function()
+{
+	$('#fb_login_button').click(function()
+	{
+		facebook_login();
+	});
 
+	$('#print-modal').click(function()
+	{
+		window.print();
+	});
+  
+	$('#generate_button').click(function()
+	{
+		var url_field = $('#url_field');
+		var event_url = url_field.val();
+		var event_id = event_id_from_url(event_url);
 
-  $('#fb_login_button').click(function(){
-    facebook_login();
-  });
+		console.log("event id: " + event_id);
 
-  $('#generate_button').click(function(){
-    var url_field = $('#url_field');
-    var event_url = url_field.val();
-    var event_id = event_id_from_url(event_url);
+		get_facebook_event(event_id, function(fb_event)
+		{
+			console.log("got event:");
+			console.log(fb_event);
 
-    // FOR DEBUGGING ONLY
-    if (typeof event_url == 'undefined'){
-      return;
-    }
-
-    console.log("event id: " + event_id);
-
-    get_facebook_event(event_id, function(fb_event){
-      console.log("got event:");
-      console.log(fb_event);
-
-      create_overlay(fb_event);
-    });
-  });
-
+			create_overlay(fb_event);
+		});
+	});
 });

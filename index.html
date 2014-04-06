@@ -32,8 +32,7 @@
 						   data-aloha-plugins="common/ui,
 												common/format,
 												common/list,
-												common/link,
-												common/highlighteditables">
+												common/link ">
 	  </script>
 	   
 	  <!-- load the Aloha Editor CSS styles -->
@@ -45,6 +44,8 @@
 					var $ = Aloha.jQuery;
 					$('.editable').aloha();
 			 });
+			 
+			 Aloha.sidebar.right.hide();
 	  </script>
   
 	</head>

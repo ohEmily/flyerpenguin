@@ -21,8 +21,7 @@ body.flyer{
 .flyer_title
 {
   font-family: 'Tauri', Helvetica, Arial, sans-serif;
-	padding-left: 15%;
-	margin: 20px;
+  margin:; 15px 0 0 0;
 	text-align: left;
 	font-size: 3em;
 	vertical-align:center;

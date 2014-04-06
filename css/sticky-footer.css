@@ -28,6 +28,7 @@ body
 /* Custom page CSS */
 .container {
   width: auto;
+  max-width: 680px;
   padding: 0 15px;
 }
 .container .text-muted {

@@ -16,11 +16,16 @@
 	border-radius: 20px;
 }
 
-/** fonts */
-@font-face 
-{
-  font-family: "Roboto";
-  src: url('../fonts/roboto-regular-webfont.ttf') format("truetype");
+h1 {
+	font-size: 3.8em;
+	font-family: 'Tauri', Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+p{
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-size: 1.1em;
+	color: #fff;
 }
 
 /** Form elements */
@@ -67,6 +72,10 @@
     border: none;
     background:#d44354;
     box-shadow: 0px 0px 1px #777;
+}
+
+.form_column{
+	padding: 40px 0 0 0;
 }
 
 #overlay_wrapper{

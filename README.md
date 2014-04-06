@@ -8,3 +8,4 @@ Make a print-ready flyer from a Facebook event.
  * HTML/CSS/JS + jQuery
  * Facebook api
  * Google Fonts
+ * DigitalOcean Droplet w/ Ubuntu

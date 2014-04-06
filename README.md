@@ -1,4 +1,4 @@
-flyerpenguin_web
+flyer penguin
 ================
 
 Make a print-ready flyer from a Facebook event.

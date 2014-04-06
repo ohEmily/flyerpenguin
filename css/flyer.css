@@ -22,6 +22,11 @@ body.flyer{
   width:100%;
 }
 
+.flyer_image{
+  max-height:400px;
+  overflow: hidden;
+}
+
 .flyer_title
 {
   font-family: 'Tauri', Helvetica, Arial, sans-serif;

@@ -1,5 +1,9 @@
 
-// https://www.facebook.com/events/657947197574532/?ref=2&ref_dashboard_filter=upcoming 
+
+// https://www.facebook.com/events/657947197574532/?ref=2&ref_dashboard_filter=upcoming
+
+
+// parse a FB event id from a url
 function event_id_from_url(url){
   var start_index = url.indexOf("/events/");
 	start_index = start_index + "/events/".length;
@@ -13,6 +17,7 @@ function event_id_from_url(url){
 	return event_id;
 }
 
+// convert facebook's time format to a human readable string
 function fb_date_time_to_human(fb_time){
   fb_time = fb_time.split("T");
 
@@ -36,7 +41,6 @@ function fb_date_time_to_human(fb_time){
     ampm = "pm";
   }
 
-
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var month_word = months[month];
 
@@ -56,6 +60,7 @@ function fb_date_time_to_human(fb_time){
   return string;
 }
 
+// display the overlay div and populate flyer with event details
 function create_overlay(fb_event){
 	var overlay_wrapper = $('div.overlay_wrapper');
 
@@ -84,23 +89,26 @@ function create_overlay(fb_event){
 
 $(document).ready(function()
 {
+  // facebook login
 	$('.fb_login_button').click(function(){
 		facebook_login();
 	});
 
+  // bring up browser print dialog
 	$('.print-modal').click(function(){
 		window.print();
 	});
   
+  // generate a printable flyer based on the provided event url and FB auth
 	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
 		var event_id = event_id_from_url(event_url);
 
-		console.log("event id: " + event_id);
-
+    // get event details from facebook
 		get_facebook_event(event_id, function(fb_event){
-			console.log("got event:");
+      // code called upon completed API request:
+
 			console.log(fb_event);
 
 			create_overlay(fb_event);

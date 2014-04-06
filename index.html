@@ -21,36 +21,45 @@
   </head>
 
   <body>
-    <div class="main_index">
-      <div id="header">
-          <img id="logo" src="images/penguin_300px.png">
-      </div>
+ 		<div class="main_index">
+			<div id="header">
+				<img id="logo" src="images/penguin_300px.png">
+			</div>
   	
-    	<!-- everything that's not in the header or footer goes here -->
-    	<div id="main"> 
-    		<input id="url_field" type="text" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address" value='https://www.facebook.com/events/657947197574532/'><br>
-        <button id="fb_login_button" type="button" class="fb_login_button form_elements">FB Login</button>
-        <button id="generate_button" type="button" class="mybutton form_elements">generate</button>
-    			
-    		<span id="text"></span>
-    	</div>
+			<!-- everything that's not in the header or footer goes here -->
+			<div id="main"> 
+				<input id="url_field" type="text" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address" value='https://www.facebook.com/events/657947197574532/'><br>
+				<button id="fb_login_button" type="button" class="fb_login_button form_elements">FB Login</button>
+				<button id="generate_button" type="button" class="mybutton form_elements">generate</button>
+  			
+				<span id="text"></span>
+			</div>
   		
-      <div id="footer">
-          <div class="container">
-      		<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
-          </div>
-      </div>
+			<div id="footer">
+				<div class="container">
+					<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
+				</div>
+			</div>
 
-    </div>
-    <div id="overlay_wrapper">
-      <div id="overlay">
-        <div id="flyer_main"> 
-        <div id="flyer_when"></div>
-        <div id="flyer_title"></div>
-        <div id="flyer_where"></div>
-        <div id="flyer_description"></div>
-      </div>
-    </div>
+		</div>
+		
+		<div id="print-modal">
+			<div id="print-modal-controls">
+				<img src="images/icon-print.png" id="print_button">
+				print flyer
+			</div>
+		</div>
+		
+		<div id="overlay_wrapper">
+			<div id="overlay">
+				<div id="flyer_main"> 
+					<div id="flyer_when"></div>
+					<div id="flyer_title"></div>
+					<div id="flyer_where"></div>
+					<div id="flyer_description"></div>
+				</div>
+			</div>
+		</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>

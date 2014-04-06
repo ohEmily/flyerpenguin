@@ -2,8 +2,16 @@
 // https://www.facebook.com/events/657947197574532/?ref=2&ref_dashboard_filter=upcoming 
 function event_id_from_url(url)
 {
-	 var url_array = url.split('/');
-   return url_array[4];
+	var start_index = url.indexOf("/events/");
+	start_index = start_index + "/events/".length;
+	
+	var end_index = url.indexOf("/", start_index);
+	// if no slash at the end of the url
+	if (end_index == "-1")
+		end_index = url.length;
+	
+	var event_id = url.substring(start_index, end_index);
+	return event_id;
 }
 
 function create_overlay(event){

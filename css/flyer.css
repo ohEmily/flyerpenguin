@@ -2,10 +2,6 @@ body.flyer{
 	background:#fff;
 }
 
-.main_index * {
-	display:none !important;
-}
-
 #flyer_main
 {
 	margin: 10%;

@@ -147,3 +147,7 @@ p {
 .aloha-sidebar-bar.aloha-sidebar-right{
 	display:none;
 }
+
+.tooltip-inner {
+    min-width: 100px;
+}

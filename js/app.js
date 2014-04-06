@@ -126,6 +126,11 @@ $(document).ready(function()
 	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
+    if ((event_url).length == 0){
+      $('.event_url_field').tooltip('show');
+      console.log("zero");
+      return;
+    }
 		var event_id = event_id_from_url(event_url);
 
     // get event details from facebook

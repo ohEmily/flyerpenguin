@@ -72,6 +72,7 @@ function create_overlay(fb_event){
 
   var description_lines = fb_event.description.split("\n");
 
+  $(".flyer_description").empty();
   for (var i = 0 ; i < description_lines.length; i++){
     $(".flyer_description").append(description_lines[i]);
     $(".flyer_description").append('<br />');
@@ -108,7 +109,7 @@ $(document).ready(function()
 
   // bring up browser print dialog
 	$('.print-modal').click(function(){
-		window.print();
+		setTimeout(window.print(),500);
 	});
   
   // generate a printable flyer based on the provided event url and FB auth

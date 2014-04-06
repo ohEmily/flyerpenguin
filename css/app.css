@@ -43,11 +43,12 @@ h1 {
 	color: #fff;
 }
 
-p{
+p {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
 	color: #fff;
 }
+
 .logo
 {
 	border-radius: 20px;
@@ -70,12 +71,29 @@ p{
 	border:0;
 }
 
+.button:active{
+	padding-top:7px;
+
+	-webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.35);
+	box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.35);
+}
+
+
 .fb_login_button{
 	background: #356BA7;
 }
 
+.fb_login_button:hover{
+	background: #255c9a;
+}
+
 .generate_button{
 	background: #E48719;
+}
+
+.generate_button:hover{
+	background: #dd8216; /* idea cb5158 */
 }
 
 

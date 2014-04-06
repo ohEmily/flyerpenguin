@@ -23,11 +23,13 @@
         <img id="logo" src="images/penguin_500px.png">
     </div>
 	
-	<div id="main">
-		<form id="myform"> 
-			<input id="url" type="email" name="url" class="form_elements" placeholder="paste in your Facebook event's web address"><br>
-			<input type="submit" onclick="submit()" value="generate" class="mybutton form_elements">
-		</form>
+	<!-- everything that's not in the header or footer goes here -->
+	<div id="main"> 
+		<input id="url_field" type="email" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address"><br>
+		<button id="generate_button" type="button" class="mybutton form_elements">generate</button>
+			
+			
+		<span id="text"></span>
 	</div>
 		
     <div id="footer">
@@ -35,13 +37,10 @@
     		<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
         </div>
     </div>
-	
-	<span id="text"></span>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fb.js"></script>
+    <script src="js/fb.js"></script> 
     <script src="js/app.js"></script>
   </body>
 </html>

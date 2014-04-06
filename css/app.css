@@ -21,6 +21,12 @@
 	width:100%;
 }
 
+#url_field
+{
+	text-align:center;
+	background: #eeeeee;
+}
+
 .form_elements
 {
 	color: #000000;

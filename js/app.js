@@ -69,7 +69,17 @@ function create_overlay(fb_event){
 	$(".print-modal").show();
 	
 	$(".flyer_title").html(fb_event.name);
-	$(".flyer_description").html(fb_event.description);
+
+  var description_lines = fb_event.description.split("\n");
+
+  for (var i = 0 ; i < description_lines.length; i++){
+    $(".flyer_description").append(description_lines[i]);
+    $(".flyer_description").append('<br />');
+  }
+
+//	$(".flyer_description").html(fb_event.description);
+  console.log(description_lines);
+
 	$(".flyer_when").html(fb_event.location);
 
   var start_time = fb_date_time_to_human(fb_event.start_time);

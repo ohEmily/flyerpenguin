@@ -86,17 +86,22 @@ function create_overlay(fb_event){
   var start_time = fb_date_time_to_human(fb_event.start_time);
 
 	$(".flyer_where").html(start_time);
-
-  $('.flyer_image').html('<img class="flyer_image_no_overlay" src="' + fb_event.cover.source + '" alt="event image" />');
+  $(".flyer_image img").remove();
+  $('.flyer_image').append('<img class="flyer_image_no_overlay" src="' + fb_event.cover.source + '" alt="event image" />');
   
   // reduce opacity of flyer image if you hover over it
-  $('.flyer_image').mouseenter(function()
-  {
-	$('.flyer_image_no_overlay').addClass('transparent');
+  $('.flyer_image').mouseenter(function(){
+	  $('.flyer_image_no_overlay').addClass('transparent_flyer_image');
+    $('.flyer_image_overlay').removeClass('hidden');
   });
-  $('.flyer_image').mouseleave(function()
-  {
-	$('.flyer_image_no_overlay').removeClass('transparent');
+
+  $('.flyer_image').mouseleave(function(){
+	  $('.flyer_image_no_overlay').removeClass('transparent_flyer_image');
+    $('.flyer_image_overlay').addClass('hidden');
+  });
+
+  $('.flyer_image').click(function(){
+    $(this).remove();
   });
   
 	overlay_wrapper.click(function(e){

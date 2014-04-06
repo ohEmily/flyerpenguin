@@ -27,7 +27,17 @@ body.flyer{
   overflow: hidden;
 }
 
-.transparent 
+.flyer_image_overlay{
+  position: absolute;
+  font-size: 2em;
+  margin-top: 100px;
+  margin-left: 184px;
+  z-index: 10;
+  font-weight: bold;
+  cursor:default;
+}
+
+.transparent_flyer_image
 {
   zoom: 1; /* gives the object layout */
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -35,6 +45,10 @@ body.flyer{
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   opacity: 0.5;
+}
+
+.hidden{
+  display:none;
 }
 
 .flyer_title

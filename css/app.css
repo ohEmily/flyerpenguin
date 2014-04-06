@@ -43,6 +43,7 @@ h1 {
 	font-size: 3.8em;
 	font-family: 'Tauri', Helvetica, Arial, sans-serif;
 	color: #fff;
+	margin-top:0px;
 }
 
 p {
@@ -135,7 +136,7 @@ p {
 
 #fb_like_button
 {
-	margin: 0px;
-	padding: 0px;
-	padding-bottom: 10px;
+	position:absolute;
+	right: 10px;
+	top: 10px;
 }

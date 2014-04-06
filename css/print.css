@@ -1,3 +1,4 @@
-.main_index * {
-  display:none !important;
+.main_index *
+{
+	display:none !important;
 }

@@ -37,15 +37,22 @@ var get_facebook_event = function(event_id, callback_fn){
        });
     }, {scope: ''});
   });
-
-  return FB_EVENT;
 }
 
 $(document).ready(function() {
 
-  get_facebook_event("1407361809535146", function(fb_event){
-    console.log("got event:");
-    console.log(fb_event);
-  });
+  // dummy id: 1407361809535146
+  $('#generate_button').click(function(){
+    var url_field = $('#url_field');
+    var event_id = url_field.val();
 
+    if (event_id.length == 0){
+      event_id = '1407361809535146';
+    }
+
+    get_facebook_event(event_id, function(fb_event){
+      console.log("got event:");
+      console.log(fb_event);
+    });
+  });
 });

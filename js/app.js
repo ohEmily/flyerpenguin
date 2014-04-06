@@ -13,6 +13,52 @@ function event_id_from_url(url){
 	return event_id;
 }
 
+function fb_date_time_to_human(fb_time){
+  console.log(fb_time);
+
+  fb_time = fb_time.split("T");
+
+  var date_arr = fb_time[0].split("-");
+  var time_arr = fb_time[1].split("-")[0].split(":");
+
+  var year = Number(date_arr[0]);
+  var month = Number(date_arr[1]);
+  month -= 1;
+  var date = Number(date_arr[2]);
+
+  var hour = Number(time_arr[0]);
+  var minute = Number(time_arr[1]);
+
+
+  var js_date = new Date(year, month, date, hour, minute);
+
+  var ampm = "am";
+  if (hour > 12){
+    hour -= 12;
+    ampm = "pm";
+  }
+
+
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+  var month_word = months[month];
+
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  var day_word = days[js_date.getDay()];
+  console.log(day_word);
+
+
+  var minutes = js_date.getMinutes().toString();
+
+  if (minutes.charAt(0) === '0'){
+    minutes = '00';
+  }
+
+  var string = hour + ":" + minutes + " " + ampm + " on " +
+    day_word + " " + month_word + " " + js_date.getDate() + ", " + js_date.getFullYear();
+
+  return string;
+}
+
 function create_overlay(fb_event){
 
   var overlay_wrapper = $('div#overlay_wrapper');
@@ -22,7 +68,10 @@ function create_overlay(fb_event){
 	$("#flyer_title").html(fb_event["name"]);
 	$("#flyer_description").html(fb_event["description"]);
 	$("#flyer_when").html(fb_event["location"]);
-	$("#flyer_where").html(fb_event["start_time"]);
+
+  var start_time = fb_date_time_to_human(fb_event["start_time"]);
+
+	$("#flyer_where").html(start_time);
 
   overlay_wrapper.click(function(){
     overlay_wrapper.slideUp('fast');

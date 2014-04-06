@@ -15,6 +15,13 @@
   width:30%;
 }
 
+/** fonts */
+@font-face 
+{
+  font-family: "Roboto";
+  src: url('../fonts/roboto-regular-webfont.ttf') format("truetype");
+}
+
 /** Form elements */
 #myform
 {

@@ -14,8 +14,6 @@ function event_id_from_url(url){
 }
 
 function fb_date_time_to_human(fb_time){
-  console.log(fb_time);
-
   fb_time = fb_time.split("T");
 
   var date_arr = fb_time[0].split("-");
@@ -44,7 +42,6 @@ function fb_date_time_to_human(fb_time){
 
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   var day_word = days[js_date.getDay()];
-  console.log(day_word);
 
 
   var minutes = js_date.getMinutes().toString();
@@ -74,8 +71,10 @@ function create_overlay(fb_event){
 
 	$("#flyer_where").html(start_time);
 
-	overlay_wrapper.click(function()
-	{
+	overlay_wrapper.click(function(e){
+    if (e.target.id !== 'overlay_wrapper'){
+      return;
+    }
 		overlay_wrapper.slideUp('fast');
 		$("#print-modal").hide();
 	});

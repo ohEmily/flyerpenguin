@@ -7,9 +7,12 @@ function event_id_from_url(url)
 }
 
 function create_overlay(event){
-  $('body').append('<div id="overlay">hello</div>');
+  $('body').append('<div id="overlay"></div>');
   var overlay = $('div#overlay');
-  overlay.html();
+
+  $('<iframe id="iframe" name="iframe" src="flyer.html">').appendTo('#overlay');
+
+
   overlay.slideDown('slow');
 }
 
@@ -25,7 +28,7 @@ $(document).ready(function() {
     var event_id = event_id_from_url(event_url);
 
     // FOR DEBUGGING ONLY
-    if (typeof event_id == 'undefined'){
+    if (typeof event_url == 'undefined'){
       return;
     }
 

@@ -14,12 +14,16 @@ function event_id_from_url(url)
 	return event_id;
 }
 
-function create_overlay(event){
+function create_overlay(fb_event){
 
   var overlay_wrapper = $('div#overlay_wrapper');
 
   overlay_wrapper.slideDown('slow');
 
+  	$( "#flyer_title").html(fb_event["name"]);
+	$("#flyer_description").html(fb_event["description"]);
+	$("#flyer_when").html(fb_event["location"]);
+	$("#flyer_where").html(fb_event["start_time"]);
 
   overlay_wrapper.click(function(){
     overlay_wrapper.slideUp('fast');

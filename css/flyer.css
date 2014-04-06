@@ -20,16 +20,23 @@ body.flyer{
 	vertical-align:center;
 }
 
-#flyer_when_and_where
+#flyer_when
 {
 	text-align: right;
-	font-size: 2em%;
+	font-size: 1.6em;
+}
+
+#flyer_where
+{
+	text-align: right;
+	font-size: 1.1em;
+	padding-bottom: 20px;
 }
 
 #flyer_description
 {
 	margin: 20px, 0px;
-	font-size: 1em%;
+	font-size: 1em;
 	text-align: left;
 }
 

@@ -4,7 +4,7 @@ body.flyer{
 
 .flyer_main
 {
-	margin: 10%;
+	margin: 7%;
 }
 
 
@@ -16,6 +16,10 @@ body.flyer{
 .flyer_when
 {
 
+}
+
+.flyer_image img{
+  width:100%;
 }
 
 .flyer_title

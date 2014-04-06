@@ -86,6 +86,8 @@ function create_overlay(fb_event){
 
 	$(".flyer_where").html(start_time);
 
+  $('.flyer_image').html('<img src="' + fb_event.cover.source + '" alt="event image" />');
+
 	overlay_wrapper.click(function(e){
     if (e.target.id !== 'overlay_wrapper'){
       return;

@@ -75,10 +75,15 @@
 	width: 70%; height: 100%;
 	z-index: 10;
 	margin-left: 15%;
+
+	width: 794px;
+	margin: 0 0 0 -429px;
+	left: 50%;
+	padding: 0 68px;
 }
 
 #iframe{
-	width:100%;
+	width:794px;
 	height:100%;
 	border:0;
 }

@@ -16,20 +16,20 @@ body.flyer{
 	padding-left: 15%;
 	margin: 20px;
 	text-align: left;
-	font-size: 300%;
+	font-size: 3em;
 	vertical-align:center;
 }
 
 #flyer_when_and_where
 {
 	text-align: right;
-	font-size: 180%;
+	font-size: 2em%;
 }
 
 #flyer_description
 {
 	margin: 20px, 0px;
-	font-size: 100%;
+	font-size: 1em%;
 	text-align: left;
 }
 

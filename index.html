@@ -14,30 +14,38 @@
 
     <!-- Custom styles for this template -->
 	<link href="css/app.css" rel="stylesheet">
-  <link href="css/sticky-footer.css" rel="stylesheet">
-  <link href="css/flyer.css" rel="stylesheet">
-  <link href="css/print.css" rel="stylesheet" media="print">
+	<link href="css/sticky-footer.css" rel="stylesheet">
+	<link href="css/flyer.css" rel="stylesheet">
+	<link href="css/print.css" rel="stylesheet" media="print">
+	<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+  
+	</head>
 
-  </head>
-
-  <body>
+	<body>
  		<div class="main_index">
-			<div id="header">
-				<img id="logo" src="images/penguin_300px.png">
+			
+			<div class="col-md-9" class="center-block">
+				<div id="logo_div" class="col-md-5">
+					<img id="logo" src="images/penguin_300px.png">
+				</div>
+			
+			<!--
+			<div class="col-md-3">
+				<span id="title">flyer penguin</span>
 			</div>
-  	
+			-->
+		
 			<!-- everything that's not in the header or footer goes here -->
-			<div id="main"> 
+			<div class="col-md-3"> 
 				<input id="url_field" type="text" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address" value='https://www.facebook.com/events/657947197574532/'><br>
 				<button id="fb_login_button" type="button" class="fb_login_button form_elements">FB Login</button>
 				<button id="generate_button" type="button" class="mybutton form_elements">generate</button>
-  			
-				<span id="text"></span>
 			</div>
-  		
+  		</div>
+		
 			<div id="footer">
 				<div class="container">
-					<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
+					<p class="text-muted"><b>flyer penguin</b> is made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
 				</div>
 			</div>
 

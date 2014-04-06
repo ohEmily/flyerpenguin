@@ -1,7 +1,8 @@
-#main
+#centered 
 {
-	margin-left:20%;
-	margin-right:20%;
+	width: auto;
+	float:none;
+	margin: 0 auto;
 }
 
 #header

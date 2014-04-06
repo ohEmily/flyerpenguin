@@ -42,6 +42,7 @@ body.flyer{
 	{
 		display: none !important;
 	}
+	
 }
 
 #print-modal
@@ -68,8 +69,6 @@ body.flyer{
     position: fixed;
     padding: 5px;
     background: rgba(250, 250, 250, 0.75);
-		cursor: pointer;
 }
 
-#print_button{
-}
+#print_button{}

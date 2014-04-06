@@ -14,7 +14,6 @@
 
     <!-- Custom styles for this template -->
 	<link href="css/app.css" rel="stylesheet">
-	<link href="css/sticky-footer.css" rel="stylesheet">
 	<link href="css/flyer.css" rel="stylesheet">
 	<link href="css/print.css" rel="stylesheet" media="print">
 	<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
@@ -25,30 +24,27 @@
 	<body>
  		<div class="main_index">
       <div class="container">
-  			
   			<div class="row" class="center-block">
   				<div class="col-sm-5">
   					<img class="logo" src="images/penguin_300px.png">
   				</div>
-  			
-  			
 
-  			<!-- everything that's not in the header or footer goes here -->
-  			<div class="form_column col-sm-6 col-sm-offset-1"> 
-          <h1 class="main_title">flyer penguin</h1>
+					<div class="form_column col-sm-6 col-sm-offset-1"> 
+            <h1 class="main_title">flyer penguin</h1>
 
-          <p class="main_description">
-            Make a print-ready flyer from a Facebook event. 
-          </p>
+            <p class="main_description">
+              Make a print-ready flyer from a Facebook event. 
+            </p>
 
-  				<input type="text" name="url_field" class=" event_url_field form-control form_elements" placeholder="paste a Facebook event link">
+    				<input type="text" name="url_field" class=" event_url_field form-control form_elements" placeholder="paste a Facebook event link">
 
-  				<button type="button" class="fb_login_button button form-control form_elements">login to Facebook</button>
-  				<button type="button" class="generate_button form-control button form_elements">generate flyer</button>
-  			</div>
-    		</div>
+    				<button type="button" class="fb_login_button button form-control form_elements">login to Facebook</button>
+    				<button type="button" class="generate_button form-control button form_elements">generate flyer</button>
+  			  </div><!-- /form_column -->
+
+  		  </div><!-- /row -->
   		</div><!-- /container -->
-			<div id="footer">
+			<div class="footer">
 				<div class="container">
 					<p class="text-muted"><b>flyer penguin</b> is made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
 				</div>
@@ -56,9 +52,9 @@
 
 		</div>
 		
-		<div id="print-modal" class="no-print">
-			<div id="print-modal-controls">
-				<img src="images/icon-print.png" id="print_button">
+		<div class="print-modal" class="no-print">
+			<div class="print-modal-controls">
+				<img src="images/icon-print.png" class="print_button">
 				print flyer
 			</div>
 		</div>

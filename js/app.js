@@ -84,26 +84,22 @@ function create_overlay(fb_event){
 
 $(document).ready(function()
 {
-	$('.fb_login_button').click(function()
-	{
+	$('.fb_login_button').click(function(){
 		facebook_login();
 	});
 
-	$('.print-modal').click(function()
-	{
+	$('.print-modal').click(function(){
 		window.print();
 	});
   
-	$('.generate_button').click(function()
-	{
+	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
 		var event_id = event_id_from_url(event_url);
 
 		console.log("event id: " + event_id);
 
-		get_facebook_event(event_id, function(fb_event)
-		{
+		get_facebook_event(event_id, function(fb_event){
 			console.log("got event:");
 			console.log(fb_event);
 

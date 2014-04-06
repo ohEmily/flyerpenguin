@@ -8,8 +8,6 @@ $(document).ready(function() {
         appId: '1407361809535146',
         forceBrowserPopupForLogin: false
       });     
-      $('#loginbutton,#feedbutton').removeAttr('disabled');
-
     });
 
 });

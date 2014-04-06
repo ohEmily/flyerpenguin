@@ -1,6 +1,40 @@
-.logo
+/* Sticky footer and main style elements
+-------------------------------------------------- */
+html 
 {
-	border-radius: 20px;
+	position: relative;
+	min-height: 100%;
+}
+
+body 
+{
+	background-color:#79CFFF;
+
+	/* Margin bottom by footer height */
+	margin-bottom: 60px;
+	padding-top: 100px;
+}
+
+.footer 
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align:center;
+
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #f5f5f5;
+}
+
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
 }
 
 h1 {
@@ -13,6 +47,10 @@ p{
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
 	color: #fff;
+}
+.logo
+{
+	border-radius: 20px;
 }
 
 /** Form elements */
@@ -51,6 +89,8 @@ p{
 .form_column{
 	padding: 40px 0 0 0;
 }
+
+/* Overlay */
 
 .overlay_wrapper{
 	overflow: hidden;

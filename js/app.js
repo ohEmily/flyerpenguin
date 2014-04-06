@@ -1,8 +1,7 @@
 
 // https://www.facebook.com/events/657947197574532/?ref=2&ref_dashboard_filter=upcoming 
-function event_id_from_url(url)
-{
-	var start_index = url.indexOf("/events/");
+function event_id_from_url(url){
+  var start_index = url.indexOf("/events/");
 	start_index = start_index + "/events/".length;
 	
 	var end_index = url.indexOf("/", start_index);
@@ -20,7 +19,7 @@ function create_overlay(fb_event){
 
   overlay_wrapper.slideDown('slow');
 
-  	$( "#flyer_title").html(fb_event["name"]);
+	$("#flyer_title").html(fb_event["name"]);
 	$("#flyer_description").html(fb_event["description"]);
 	$("#flyer_when").html(fb_event["location"]);
 	$("#flyer_where").html(fb_event["start_time"]);
@@ -35,7 +34,10 @@ function create_overlay(fb_event){
 $(document).ready(function() {
 
 
-  // dummy id: 1407361809535146
+  $('#fb_login_button').click(function(){
+    facebook_login();
+  });
+
   $('#generate_button').click(function(){
     var url_field = $('#url_field');
     var event_url = url_field.val();

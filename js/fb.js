@@ -1,41 +1,47 @@
 var get_facebook_event = function(event_id, callback_fn){
 
-  var FB_EVENT = null;
+  if (typeof FB === 'undefined'){
+    alert("Please log in first. ");
+    return;
+  }
 
-  $.ajaxSetup({ cache: true });
-  $.getScript('//connect.facebook.net/en_UK/all.js', function(){
-    // initialize the FB object
-    FB.init({
-      appId: '1407361809535146',
-      forceBrowserPopupForLogin: false
-    });     
-    $('#loginbutton,#feedbutton').removeAttr('disabled');
+  // call the api to get the event
+  FB.api(
+    '/' + event_id,
+    'get',
 
-    // ask the user to authenticate
-    FB.login(function(){
+    // handle the api response
+    function(response){
 
-      // call the api to get the event
-      FB.api(
-        '/' + event_id,
-        'get',
+      // handle an error
+      if (!response || response.error){
+        console.log("Login error occurred. ");
+      }
+      // handle a successful login
+      else{
+        console.log("Successful login. ")
+        console.log(response);
 
-        // handle the api response
-        function(response){
+        // send the fb_event object to the callback function
+        callback_fn(response); 
+      }
+    });
+  }
 
-          // handle an error
-          if (!response || response.error){
-            console.log("Login error occurred. ");
-          }
-          // handle a successful login
-          else{
-            console.log("Successful login. ")
-            console.log(response);
+  function facebook_login(){
 
-            // set the event object
-            FB_EVENT = response;
-            callback_fn(FB_EVENT);
-          }
-       });
-    }, {scope: ''});
-  });
-}
+    $.ajaxSetup({ cache: true });
+    $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+      // initialize the FB object
+      FB.init({
+        appId: '1407361809535146',
+        forceBrowserPopupForLogin: false
+      });     
+      $('#loginbutton,#feedbutton').removeAttr('disabled');
+
+      // ask the user to authenticate
+      FB.login(function(){
+
+      }, {scope: ''});
+    });
+  }

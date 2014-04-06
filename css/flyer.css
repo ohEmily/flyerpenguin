@@ -44,7 +44,10 @@ body.flyer{
 	.no-print, .no-print *
 	{
 		display: none !important;
+    overflow: hidden;
 	}
+
+
 	
 }
 

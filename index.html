@@ -15,28 +15,31 @@
     <!-- Custom styles for this template -->
 	<link href="css/app.css" rel="stylesheet">
   <link href="css/sticky-footer.css" rel="stylesheet">
+  <link href="css/flyer.css" rel="stylesheet" media="print">
 
   </head>
 
   <body>
-    <div id="header">
-        <img id="logo" src="images/penguin_500px.png">
-    </div>
-	
-	<!-- everything that's not in the header or footer goes here -->
-	<div id="main"> 
-		<input id="url_field" type="text" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address"><br>
-		<button id="generate_button" type="button" class="mybutton form_elements">generate</button>
-			
-		<span id="text"></span>
-	</div>
-		
-    <div id="footer">
-        <div class="container">
-    		<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
-        </div>
-    </div>
+    <div class="main_index">
+      <div id="header">
+          <img id="logo" src="images/penguin_500px.png">
+      </div>
+  	
+  	<!-- everything that's not in the header or footer goes here -->
+  	<div id="main"> 
+  		<input id="url_field" type="text" name="url_field" class="form_elements" placeholder="paste in your Facebook event's web address"><br>
+  		<button id="generate_button" type="button" class="mybutton form_elements">generate</button>
+  			
+  		<span id="text"></span>
+  	</div>
+  		
+      <div id="footer">
+          <div class="container">
+      		<p class="text-muted"><b>flyerpenguin</b> made by <a href="http://michaelgarate.com" target="_blank">Michael</a> and <a href="http://emilypakulski.com" target="_blank">Emily</a>.</p>
+          </div>
+      </div>
 
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/fb.js"></script> 

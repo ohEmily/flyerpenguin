@@ -6,6 +6,13 @@ function event_id_from_url(url)
    return url_array[4];
 }
 
+function create_overlay(event){
+  $('body').append('<div id="overlay">hello</div>');
+  var overlay = $('div#overlay');
+  overlay.html();
+  overlay.slideDown('slow');
+}
+
 
 
 $(document).ready(function() {
@@ -27,6 +34,8 @@ $(document).ready(function() {
     get_facebook_event(event_id, function(fb_event){
       console.log("got event:");
       console.log(fb_event);
+
+      create_overlay(fb_event);
     });
   });
 });

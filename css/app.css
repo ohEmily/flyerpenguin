@@ -67,3 +67,14 @@
     background:#d44354;
     box-shadow: 0px 0px 1px #777;
 }
+
+#overlay{
+	background-color: #fff;
+	opacity: .7;
+	filter: alpha(opacity=70);
+	display:none;
+	position: absolute; top: 0; left: 0;
+	width: 70%; height: 100%;
+	z-index: 10;
+	margin-left: 15%;
+}

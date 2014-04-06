@@ -18,10 +18,6 @@ function create_overlay(event){
 
   var overlay_wrapper = $('div#overlay_wrapper');
 
-  $('iframe').remove();
-  $('<iframe id="iframe" name="iframe" src="flyer.html">').appendTo('#overlay');
-
-
   overlay_wrapper.slideDown('slow');
 
 
@@ -34,7 +30,6 @@ function create_overlay(event){
 
 $(document).ready(function() {
 
-  $('body').append('<div id="overlay_wrapper"><div id="overlay"></div></div>');
 
   // dummy id: 1407361809535146
   $('#generate_button').click(function(){

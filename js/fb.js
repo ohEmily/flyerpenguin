@@ -7,6 +7,7 @@ var get_facebook_event = function(event_id, callback_fn){
     // initialize the FB object
     FB.init({
       appId: '1407361809535146',
+      forceBrowserPopupForLogin: false
     });     
     $('#loginbutton,#feedbutton').removeAttr('disabled');
 

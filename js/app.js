@@ -15,19 +15,26 @@ function event_id_from_url(url)
 }
 
 function create_overlay(event){
-  $('body').append('<div id="overlay"></div>');
-  var overlay = $('div#overlay');
 
+  var overlay_wrapper = $('div#overlay_wrapper');
+
+  $('iframe').remove();
   $('<iframe id="iframe" name="iframe" src="flyer.html">').appendTo('#overlay');
 
 
-  overlay.slideDown('slow');
+  overlay_wrapper.slideDown('slow');
+
+
+  overlay_wrapper.click(function(){
+    overlay_wrapper.slideUp('fast');
+  });
 }
 
 
 
 $(document).ready(function() {
 
+  $('body').append('<div id="overlay_wrapper"><div id="overlay"></div></div>');
 
   // dummy id: 1407361809535146
   $('#generate_button').click(function(){
@@ -49,4 +56,5 @@ $(document).ready(function() {
       create_overlay(fb_event);
     });
   });
+
 });

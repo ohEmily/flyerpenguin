@@ -1,16 +1,29 @@
-function format_url(url)
+
+// https://www.facebook.com/events/657947197574532/?ref=2&ref_dashboard_filter=upcoming 
+function event_id_from_url(url)
 {
-	
+	 var url_array = url.split('/');
+   return url_array[4];
 }
 
-$("#generate_button").click(function()
-{
-	var url = $("#url_field").val();
 
-	var formatted_url = format_url(url);
-	//alert(url);
-	
-	
-	
-	$("#text").text(url);
+
+$(document).ready(function() {
+
+  // dummy id: 1407361809535146
+  $('#generate_button').click(function(){
+    var url_field = $('#url_field');
+    var event_url = url_field.val();
+    var event_id = event_id_from_url(event_url);
+
+    // FOR DEBUGGING ONLY
+    if (event_id.length == 0){
+      event_id = '1407361809535146';
+    }
+
+    get_facebook_event(event_id, function(fb_event){
+      console.log("got event:");
+      console.log(fb_event);
+    });
+  });
 });

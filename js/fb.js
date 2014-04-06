@@ -37,15 +37,4 @@ var get_facebook_event = function(event_id, callback_fn){
        });
     }, {scope: ''});
   });
-
-  return FB_EVENT;
 }
-
-$(document).ready(function() {
-
-  get_facebook_event("1407361809535146", function(fb_event){
-    console.log("got event:");
-    console.log(fb_event);
-  });
-
-});

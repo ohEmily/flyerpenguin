@@ -37,7 +37,7 @@ function fb_date_time_to_human(fb_time){
   }
 
 
-  var months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var month_word = months[month];
 
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -63,11 +63,11 @@ function create_overlay(fb_event){
 
 	$(".print-modal").show();
 	
-	$(".flyer_title").html(fb_event["name"]);
-	$(".flyer_description").html(fb_event["description"]);
-	$(".flyer_when").html(fb_event["location"]);
+	$(".flyer_title").html(fb_event.name);
+	$(".flyer_description").html(fb_event.description);
+	$(".flyer_when").html(fb_event.location);
 
-  var start_time = fb_date_time_to_human(fb_event["start_time"]);
+  var start_time = fb_date_time_to_human(fb_event.start_time);
 
 	$(".flyer_where").html(start_time);
 

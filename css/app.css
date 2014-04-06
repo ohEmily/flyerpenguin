@@ -28,12 +28,14 @@ body
 }
 
 
-.container {
+.container 
+{
   width: auto;
   max-width: 680px;
   padding: 0 15px;
 }
-.container .text-muted {
+.container .text-muted 
+{
   margin: 20px 0;
 }
 
@@ -129,4 +131,11 @@ p {
 	margin: 0 0 0 -429px;
 	left: 50%;
 	padding: 0 68px;
+}
+
+#fb_like_button
+{
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 10px;
 }

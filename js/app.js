@@ -57,26 +57,26 @@ function fb_date_time_to_human(fb_time){
 }
 
 function create_overlay(fb_event){
-	var overlay_wrapper = $('div#overlay_wrapper');
+	var overlay_wrapper = $('div.overlay_wrapper');
 
 	overlay_wrapper.slideDown('slow');
 
-	$("#print-modal").show();
+	$(".print-modal").show();
 	
-	$("#flyer_title").html(fb_event["name"]);
-	$("#flyer_description").html(fb_event["description"]);
-	$("#flyer_when").html(fb_event["location"]);
+	$(".flyer_title").html(fb_event["name"]);
+	$(".flyer_description").html(fb_event["description"]);
+	$(".flyer_when").html(fb_event["location"]);
 
   var start_time = fb_date_time_to_human(fb_event["start_time"]);
 
-	$("#flyer_where").html(start_time);
+	$(".flyer_where").html(start_time);
 
 	overlay_wrapper.click(function(e){
     if (e.target.id !== 'overlay_wrapper'){
       return;
     }
 		overlay_wrapper.slideUp('fast');
-		$("#print-modal").hide();
+		$(".print-modal").hide();
 	});
 }
 
@@ -84,19 +84,19 @@ function create_overlay(fb_event){
 
 $(document).ready(function()
 {
-	$('#fb_login_button').click(function()
+	$('.fb_login_button').click(function()
 	{
 		facebook_login();
 	});
 
-	$('#print-modal').click(function()
+	$('.print-modal').click(function()
 	{
 		window.print();
 	});
   
-	$('#generate_button').click(function()
+	$('.generate_button').click(function()
 	{
-		var url_field = $('#url_field');
+		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
 		var event_id = event_id_from_url(event_url);
 

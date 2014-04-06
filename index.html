@@ -27,8 +27,8 @@
       <div class="container">
   			
   			<div class="row" class="center-block">
-  				<div id="logo_div" class="col-sm-5">
-  					<img id="logo" src="images/penguin_300px.png">
+  				<div class="col-sm-5">
+  					<img class="logo" src="images/penguin_300px.png">
   				</div>
   			
   			
@@ -41,10 +41,10 @@
             Make a print-ready flyer from a Facebook event. 
           </p>
 
-  				<input id="url_field" type="text" name="url_field" class="form-control form_elements" placeholder="paste a Facebook event link">
+  				<input type="text" name="url_field" class=" event_url_field form-control form_elements" placeholder="paste a Facebook event link">
 
-  				<button id="fb_login_button" type="button" class="fb_login_button button form-control form_elements">login to Facebook</button>
-  				<button id="generate_button" type="button" class="generate_button form-control button form_elements">generate flyer</button>
+  				<button type="button" class="fb_login_button button form-control form_elements">login to Facebook</button>
+  				<button type="button" class="generate_button form-control button form_elements">generate flyer</button>
   			</div>
     		</div>
   		</div><!-- /container -->
@@ -63,13 +63,13 @@
 			</div>
 		</div>
 		
-		<div id="overlay_wrapper">
-			<div id="overlay">
-				<div id="flyer_main"> 
-					<div id="flyer_when"></div>
-					<div id="flyer_title"></div>
-					<div id="flyer_where"></div>
-					<div id="flyer_description"></div>
+		<div id="overlay_wrapper" class="overlay_wrapper">
+			<div class="overlay">
+				<div class="flyer_main"> 
+					<div class="flyer_when"></div>
+					<div class="flyer_title"></div>
+					<div class="flyer_where"></div>
+					<div class="flyer_description"></div>
 				</div>
 			</div>
 		</div>

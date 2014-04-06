@@ -139,3 +139,8 @@ p {
 	left: 10px;
 	top: 10px;
 }
+
+.aloha-sidebar-bar.aloha-sidebar-right{
+	display:none;
+}
+

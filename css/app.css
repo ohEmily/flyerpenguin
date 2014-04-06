@@ -1,0 +1,41 @@
+
+
+/** Form elements */
+.myform
+{
+	width:100%;
+}
+
+.form_elements
+{
+	color: #000000;
+	font: inherit;
+	width:100%;
+	padding: 8px 0;
+	margin-top:5px;
+	margin-bottom:5px;
+	border:0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:6px;
+}
+
+.mybutton
+{
+	color: #000000;
+	width: 100%;
+	background: #ee475b;
+	overflow: visible;
+	border:0;
+	padding: 8px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:6px;
+}
+
+.mybutton:hover 
+{
+    border: none;
+    background:#d44354;
+    box-shadow: 0px 0px 1px #777;
+}

@@ -87,8 +87,18 @@ function create_overlay(fb_event){
 
 	$(".flyer_where").html(start_time);
 
-  $('.flyer_image').html('<img src="' + fb_event.cover.source + '" alt="event image" />');
-
+  $('.flyer_image').html('<img class="flyer_image_no_overlay" src="' + fb_event.cover.source + '" alt="event image" />');
+  
+  // reduce opacity of flyer image if you hover over it
+  $('.flyer_image').mouseenter(function()
+  {
+	$('.flyer_image_no_overlay').addClass('transparent');
+  });
+  $('.flyer_image').mouseleave(function()
+  {
+	$('.flyer_image_no_overlay').removeClass('transparent');
+  });
+  
 	overlay_wrapper.click(function(e){
     if (e.target.id !== 'overlay_wrapper'){
       return;

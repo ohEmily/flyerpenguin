@@ -8,10 +8,14 @@ body.flyer{
 }
 
 
-.flyer_when
-{
+.flyer_when, .flyer_where{
   text-align: right;
   font-size: 1.6em;
+}
+
+.flyer_when
+{
+
 }
 
 .flyer_title
@@ -26,8 +30,6 @@ body.flyer{
 
 .flyer_where
 {
-	text-align: right;
-	font-size: 1.1em;
 	padding-bottom: 20px;
 }
 

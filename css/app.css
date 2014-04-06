@@ -49,6 +49,10 @@ h1 {
 p {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
+	color: #000;
+}
+
+.main_description{
 	color: #fff;
 }
 
@@ -143,4 +147,3 @@ p {
 .aloha-sidebar-bar.aloha-sidebar-right{
 	display:none;
 }
-

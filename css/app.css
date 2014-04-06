@@ -38,40 +38,30 @@ p{
 {
 	text-align:center;
 	background: #eeeeee;
+
 }
 
 .form_elements
 {
-	color: #000000;
-	font: inherit;
-	width:100%;
-	padding: 8px 0;
-	margin-top:5px;
-	margin-bottom:5px;
-	border:0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius:6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+
+	margin: 8px 0 0 0;
 }
 
-.mybutton
-{
-	color: #000000;
-	width: 100%;
-	background: #ee475b;
-	overflow: visible;
+.button{
+	color: #fff;
+	background: #aaa;
 	border:0;
-	padding: 8px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius:6px;
 }
 
-.mybutton:hover 
-{
-    border: none;
-    background:#d44354;
-    box-shadow: 0px 0px 1px #777;
+.fb_login_button{
+	background: #356BA7;
+}
+
+.generate_button{
+	background: #d97a09;
 }
 
 .form_column{

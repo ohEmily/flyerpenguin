@@ -60,6 +60,10 @@ function fb_date_time_to_human(fb_time){
   return string;
 }
 
+function wrap_in_p_tag(s){
+  return "<p>" + s + "</p>"
+}
+
 // display the overlay div and populate flyer with event details
 function create_overlay(fb_event){
 	var overlay_wrapper = $('div.overlay_wrapper');
@@ -68,23 +72,23 @@ function create_overlay(fb_event){
 
 	$(".print-modal").show();
 	
-	$(".flyer_title").html(fb_event.name);
+	$(".flyer_title").html(wrap_in_p_tag(fb_event.name));
 
   var description_lines = fb_event.description.split("\n");
 
   $(".flyer_description").empty();
   for (var i = 0 ; i < description_lines.length; i++){
-    $(".flyer_description").append('<p>' + description_lines[i] + '</p>');
+    $(".flyer_description").append(wrap_in_p_tag(description_lines[i]));
   }
 
 //	$(".flyer_description").html(fb_event.description);
   console.log(description_lines);
 
-	$(".flyer_when").html(fb_event.location);
+	$(".flyer_when").html(wrap_in_p_tag(fb_event.location));
 
   var start_time = fb_date_time_to_human(fb_event.start_time);
 
-	$(".flyer_where").html(start_time);
+	$(".flyer_where").html(wrap_in_p_tag(start_time));
   $(".flyer_image img").remove();
   $('.flyer_image').append('<img class="flyer_image_no_overlay" src="' + fb_event.cover.source + '" alt="event image" />');
   

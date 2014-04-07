@@ -54,7 +54,6 @@ body.flyer{
 .flyer_title
 {
   font-family: 'Tauri', Helvetica, Arial, sans-serif;
-  margin:; 15px 0 0 0;
 	text-align: left;
 	font-size: 3em;
 	vertical-align:center;
@@ -62,12 +61,12 @@ body.flyer{
 
 .flyer_where
 {
-	padding-bottom: 20px;
+	padding-bottom: 0;
 }
 
 .flyer_description
 {
-	margin: 20px, 0px;
+	margin: 20px 0px;
 	font-size: 1em;
 	text-align: left;
 }

@@ -74,8 +74,7 @@ function create_overlay(fb_event){
 
   $(".flyer_description").empty();
   for (var i = 0 ; i < description_lines.length; i++){
-    $(".flyer_description").append(description_lines[i]);
-    $(".flyer_description").append('<br />');
+    $(".flyer_description").append('<p>' + description_lines[i] + '</p>');
   }
 
 //	$(".flyer_description").html(fb_event.description);

@@ -43,8 +43,8 @@ var get_facebook_event = function(event_id, callback_fn){
     });
   }
 
-  function facebook_login(){
-
+  function facebook_login(item){
+    console.log("trying to login");
     FB.getLoginStatus(function(response){
       if (response.status !== 'connected'){
 
@@ -52,6 +52,10 @@ var get_facebook_event = function(event_id, callback_fn){
         FB.login(function(){
 
         }, {scope: ''});
+      }
+      else{
+        $(item).html("Successfully logged in.");
+        $(item).addClass("logged_in");
       }
     }); 
 

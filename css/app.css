@@ -103,6 +103,9 @@ p {
 	background: #dd8216; /* idea cb5158 */
 }
 
+.logged_in{
+	background: #4A709B;
+}
 
 .event_url_field
 {

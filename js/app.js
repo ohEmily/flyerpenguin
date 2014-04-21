@@ -122,7 +122,8 @@ $(document).ready(function()
 {
   // facebook login
 	$('.fb_login_button').click(function(){
-		facebook_login();
+		facebook_login(this);
+    $(this).tooltip('show');
 	});
 
   // bring up browser print dialog

@@ -54,7 +54,7 @@ var get_facebook_event = function(event_id, callback_fn){
         }, {scope: ''});
       }
       else{
-        $(item).html("Successfully logged in.");
+        $(item).html("successfully logged in");
         $(item).addClass("logged_in");
       }
     }); 

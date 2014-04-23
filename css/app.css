@@ -154,3 +154,14 @@ p {
 .tooltip-inner {
     min-width: 100px;
 }
+
+/** mobile notification */
+#mobile-note
+{
+	display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px)
+{
+  #mobile-note { display: block; }  /* show it on small screens */
+}

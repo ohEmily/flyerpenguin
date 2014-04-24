@@ -115,3 +115,7 @@ body.flyer{
 }
 
 .print_button{}
+
+.border-highlight{
+   outline: #f4edc6 solid 5px !important;
+}

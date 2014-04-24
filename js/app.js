@@ -71,4 +71,8 @@ $(document).ready(function()
 			create_overlay(fb_event);
 		});
 	});
+
+  $('.editable').hover(function(){
+    $(this).toggleClass("border-highlight");
+  });
 });

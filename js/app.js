@@ -66,7 +66,7 @@ function wrap_in_p_tag(s){
 
 // display the overlay div and populate flyer with event details
 function create_overlay(fb_event){
-	var overlay_wrapper = $('div.overlay_wrapper');
+	var overlay_wrapper = $('.overlay_wrapper');
 
 	overlay_wrapper.slideDown('slow');
 

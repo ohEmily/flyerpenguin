@@ -158,9 +158,23 @@ p {
 	display:none;
 }
 
-.tooltip-inner {
-    min-width: 100px;
+/* usable to change tooltip color */
+/*
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-right-color: #ddd;
+  border-width: 5px 5px 5px 0;
 }
+
+.tooltip-inner {
+  color: #000;
+  background: #ddd;
+  border: solid 1px #ddd;
+  min-width: 100px;
+}
+*/ 
 
 /** mobile notification */
 #mobile-note

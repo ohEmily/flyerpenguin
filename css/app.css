@@ -159,7 +159,7 @@ p {
 }
 
 /* usable to change tooltip color */
-/*
+
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
@@ -174,7 +174,6 @@ p {
   border: solid 1px #ddd;
   min-width: 100px;
 }
-*/ 
 
 /** mobile notification */
 #mobile-note

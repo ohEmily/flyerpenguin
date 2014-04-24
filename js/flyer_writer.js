@@ -67,9 +67,6 @@ function fb_date_time_to_human(fb_time){
   }
   fb_time = fb_time.split("T");
 
-  // check if fb_time is an array
-  console.log("fb_time:" + fb_time.length);
-
   var hour,minute;
 
   var time_string = "";

@@ -67,25 +67,48 @@ function fb_date_time_to_human(fb_time){
   }
   fb_time = fb_time.split("T");
 
+  // check if fb_time is an array
+  console.log("fb_time:" + fb_time.length);
+
+  var hour,minute;
+
+  var time_string = "";
+
+  // if a time is provided
+  if (fb_time.length === 2){
+    var time_arr = fb_time[1].split("-")[0].split(":");
+    hour = Number(time_arr[0]);
+    minute = Number(time_arr[1]).toString();
+
+    if (minute.charAt(0) === '0'){
+      minute = '00';
+    }
+
+    var ampm = "am";
+    if (hour > 12){
+      hour -= 12;
+      ampm = "pm";
+    }
+
+    time_string = hour + ":" + minute + " " + ampm + " on ";
+  }
+  else{
+    hour = 0;
+    minute = 0;
+  }
+
+
   var date_arr = fb_time[0].split("-");
-  var time_arr = fb_time[1].split("-")[0].split(":");
 
   var year = Number(date_arr[0]);
   var month = Number(date_arr[1]);
   month -= 1;
   var date = Number(date_arr[2]);
 
-  var hour = Number(time_arr[0]);
-  var minute = Number(time_arr[1]);
 
 
   var js_date = new Date(year, month, date, hour, minute);
 
-  var ampm = "am";
-  if (hour > 12){
-    hour -= 12;
-    ampm = "pm";
-  }
 
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   var month_word = months[month];
@@ -93,17 +116,9 @@ function fb_date_time_to_human(fb_time){
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
   var day_word = days[js_date.getDay()];
 
+  var date_string = day_word + " " + month_word + " " + js_date.getDate() + ", " + js_date.getFullYear();
 
-  var minutes = js_date.getMinutes().toString();
-
-  if (minutes.charAt(0) === '0'){
-    minutes = '00';
-  }
-
-  var string = hour + ":" + minutes + " " + ampm + " on " +
-    day_word + " " + month_word + " " + js_date.getDate() + ", " + js_date.getFullYear();
-
-  return string;
+  return time_string + date_string;
 }
 
 function wrap_in_p_tag(s){

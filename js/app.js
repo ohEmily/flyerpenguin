@@ -1,3 +1,10 @@
+// make sure that the url field is a Facebook event
+function is_valid_url(url)
+{
+	if (url.indexOf("facebook.com/events/") == -1)
+		return false;
+	return true;
+}
 
 // parse a FB event id from a url
 function event_id_from_url(url){
@@ -55,19 +62,27 @@ $(document).ready(function()
 	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
-    if ((event_url).length == 0){
-      $('.event_url_field').tooltip('show');
-      console.log("zero");
-      return;
-    }
+    
+		if (!is_valid_url(event_url))
+		{
+		  $('.event_url_field').tooltip('show');
+		  $('#link_field').addClass('has-error');
+		  console.log("zero");
+		  return;
+		}
+		else
+		{
+		  $('#link_field').removeClass('has-error');
+		}
+		
+		
 		var event_id = event_id_from_url(event_url);
 
-    // get event details from facebook
+		// get event details from facebook
 		get_facebook_event(event_id, function(fb_event){
-      // code called upon completed API request:
-
+			// code called upon completed API request:
 			console.log(fb_event);
-      clear_flyer_overlay();
+			clear_flyer_overlay();
 			create_overlay(fb_event);
 		});
 	});

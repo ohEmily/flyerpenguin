@@ -13,7 +13,31 @@ function populate_overlay(fb_event){
 
   write_event_description(fb_event.description);
   write_event_image(fb_event.cover);
+
+
+  set_jquery_bindings(fb_event);
+
   
+}
+
+function set_jquery_bindings(fb_event){
+
+  $('.toggle-image').unbind();
+  $('.toggle-image').click(function(){
+    console.log("got a click");
+    // if an image is present, remove it
+    var flyer_image = $(".flyer_image img");
+    if (flyer_image.length > 0){
+      flyer_image.remove();
+    }
+
+    // otherwise add it
+    else{
+      console.log("adding it back");
+      write_event_image(fb_event.cover);
+    }
+
+  });
 }
 
 function write_event_image(cover){
@@ -38,7 +62,7 @@ function write_event_image(cover){
   });
 
   $('.flyer_image').click(function(){
-    $(this).remove();
+    $('.flyer_image img').remove();
   });
 }
 

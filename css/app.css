@@ -66,6 +66,7 @@ p {
 
 .form-elements
 {
+	padding-right: 0px;
 	margin: 8px 0 0 0;
 }
 
@@ -109,6 +110,13 @@ p {
 	text-align:center;
 	background: #eeeeee;
 
+}
+
+/* prevents right padding bug on text field */
+.has-feedback
+.form-control
+{
+	padding-right: 0px;
 }
 
 .form_column{

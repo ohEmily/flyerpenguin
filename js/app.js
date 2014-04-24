@@ -6,6 +6,17 @@ function is_valid_url(url)
 	return true;
 }
 
+// shows Bootstrap tooltip if event url hasn't been filled
+var show_tooltip = function(event_url)
+{
+	if (!is_valid_url(event_url))
+	{
+	  $('.event_url_field').tooltip('show');
+	  console.log("zero");
+	  return;
+	}
+}
+
 // colors textfield border red or green depending on user input validity
 var update_textfield = function()
 {
@@ -89,15 +100,11 @@ $(document).ready(function()
 	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
 		var event_url = url_field.val();
-    
-		if (!is_valid_url(event_url))
-		{
-		  $('.event_url_field').tooltip('show');
-		  console.log("zero");
-		  return;
-		}		
 		
 		var event_id = event_id_from_url(event_url);
+		
+		// if no url present, directs user to enter one
+		show_tooltip(event_url);
 
 		// get event details from facebook
 		get_facebook_event(event_id, function(fb_event){

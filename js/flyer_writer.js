@@ -24,7 +24,6 @@ function set_jquery_bindings(fb_event){
 
   $('.toggle-image').unbind();
   $('.toggle-image').click(function(){
-    console.log("got a click");
     // if an image is present, remove it
     var flyer_image = $(".flyer_image img");
     if (flyer_image.length > 0){
@@ -33,7 +32,6 @@ function set_jquery_bindings(fb_event){
 
     // otherwise add it
     else{
-      console.log("adding it back");
       write_event_image(fb_event.cover);
     }
 

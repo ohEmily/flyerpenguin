@@ -126,5 +126,5 @@ body.flyer{
   height: 44px;
   z-index: 100;
   position:absolute;
-  background: rgba(0,0,0,0.7);
+  background: rgba(100,100,100,0.7);
 }

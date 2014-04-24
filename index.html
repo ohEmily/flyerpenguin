@@ -19,19 +19,46 @@
   <link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   
-
-    <!-- load the Aloha Editor CSS styles -->
-    <link href="aloha/css/aloha.css" rel="stylesheet" type="text/css" />
-  
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
+  <!-- aloha -->
+  <!-- load the jQuery and require.js libraries -->
+    <script type="text/javascript" src="aloha/lib/require.js"></script>
+    <script type="text/javascript" src="aloha/lib/vendor/jquery-1.7.2.js"></script>
+
+
+    <script type="text/javascript">
+      Aloha = {};
+      Aloha.settings = { sidebar: { disabled: true } };
+    </script>
+
+    <!-- load the Aloha Editor core and some plugins -->
+    <script src="aloha/lib/aloha.js" 
+               data-aloha-plugins="common/ui,
+                        common/format,
+                        common/list,
+                        common/link ">
+    </script>
+     
+    <!-- load the Aloha Editor CSS styles -->
+    <link href="aloha/css/aloha.css" rel="stylesheet" type="text/css" />
+
+    <!-- make all elements with class="editable" editable with Aloha Editor -->
+    <script type="text/javascript">
+       Aloha.ready( function() {
+          var $ = Aloha.jQuery;
+          $('.editable').aloha();
+          $('.aloha-ui-pin').trigger('click');
+       });
+       
+    </script>
   
   </head>
 
   <body>
   <!-- like button for Facebook -->
-	<div id="fb-root"></div>
+  <div id="fb-root"></div>
     <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -45,8 +72,8 @@
   
     <div class="main_index">
       <div class="container">
-		<div id="mobile-note" class="alert alert-warning">Hello! Please note that while <b>flyerpenguin</b>.com displays on mobile devices and tablets, only devices that can print can really benefit from <b>flyerpenguin</b>.</div>
-	 
+    <div id="mobile-note" class="alert alert-warning">Hello! Please note that while <b>flyerpenguin</b>.com displays on mobile devices and tablets, only devices that can print can really benefit from <b>flyerpenguin</b>.</div>
+   
         <div class="row">
           <div class="col-sm-5">
             <img class="logo" alt="flyer penguin" src="images/penguin_300px.png">
@@ -54,18 +81,18 @@
 
           <div class="form_column col-sm-6 col-sm-offset-1"> 
             
-			<h1 class="main_title">flyer penguin</h1>
+      <h1 class="main_title">flyer penguin</h1>
 
-			<p class="main_description">
-				Make a print-ready flyer from a Facebook event. 
+      <p class="main_description">
+        Make a print-ready flyer from a Facebook event. 
             </p>
-			
-			<div id="link_field" class="form-group has-feedback form-elements">
-				<input type="text" name="url_field" class="event_url_field form-elements form-control" placeholder="paste a Facebook event link" data-toggle="tooltip" data-placement="right"  title="please enter an event url.">
-			</div> 
+      
+      <div id="link_field" class="form-group has-feedback form-elements">
+        <input type="text" name="url_field" class="event_url_field form-elements form-control" placeholder="paste a Facebook event link" data-toggle="tooltip" data-placement="right"  title="please enter an event url.">
+      </div> 
 
             <button type="button" class="fb_login_button button form-elements form-control" data-toggle="tooltip" data-placement="right"  title="You're in!">login to Facebook</button>
-			
+      
             <button type="button" class="generate_button form-elements form-control button">customize flyer</button>
 
           </div><!-- /form_column -->
@@ -111,38 +138,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- aloha -->
-    <!-- load the jQuery and require.js libraries -->
-    <script type="text/javascript" src="aloha/lib/require.js"></script>
-    <script type="text/javascript" src="aloha/lib/vendor/jquery-1.7.2.js"></script>
-
-
-    <script type="text/javascript">
-      Aloha = {};
-      Aloha.settings = { sidebar: { disabled: true } };
-    </script>
-
-    <!-- load the Aloha Editor core and some plugins -->
-    <script src="aloha/lib/aloha.js" 
-               data-aloha-plugins="common/ui,
-                        common/format,
-                        common/list,
-                        common/link ">
-    </script>
-     
-
-    <!-- make all elements with class="editable" editable with Aloha Editor -->
-    <script type="text/javascript">
-       Aloha.ready( function() {
-          var $ = Aloha.jQuery;
-          $('.editable').aloha();
-          $('.aloha-ui-pin').trigger('click');
-       });
-       
-    </script>
-
-
     <script src="js/fb.js"></script> 
     <script src="js/flyer_writer.js"></script> 
     <script src="js/app.js"></script>

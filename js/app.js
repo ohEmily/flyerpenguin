@@ -90,4 +90,5 @@ $(document).ready(function()
   $('.editable').hover(function(){
     $(this).toggleClass("border-highlight");
   });
+
 });

@@ -14,6 +14,14 @@ function populate_overlay(fb_event){
   write_event_description(fb_event.description);
   write_event_image(fb_event.cover);
 
+
+  set_jquery_bindings(fb_event);
+
+  
+}
+
+function set_jquery_bindings(fb_event){
+
   $('.toggle-image').unbind();
   $('.toggle-image').click(function(){
     console.log("got a click");
@@ -30,7 +38,6 @@ function populate_overlay(fb_event){
     }
 
   });
-  
 }
 
 function write_event_image(cover){

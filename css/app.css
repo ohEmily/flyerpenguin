@@ -62,6 +62,12 @@ p {
 	border-radius: 20px;
 }
 
+.toolbar_text
+{
+	font-weight: bold;
+	color: #eee;
+}
+
 /** Form elements */
 
 .form-elements

@@ -19,6 +19,9 @@ function event_id_from_url(url){
 
 // convert facebook's time format to a human readable string
 function fb_date_time_to_human(fb_time){
+  if (typeof fb_time == 'undefined'){
+    return "";
+  }
   fb_time = fb_time.split("T");
 
   var date_arr = fb_time[0].split("-");
@@ -61,6 +64,9 @@ function fb_date_time_to_human(fb_time){
 }
 
 function wrap_in_p_tag(s){
+  if (typeof s == 'undefined'){
+    s = "";
+  }
   return "<p>" + s + "</p>"
 }
 

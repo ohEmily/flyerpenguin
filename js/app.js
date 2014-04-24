@@ -6,6 +6,29 @@ function is_valid_url(url)
 	return true;
 }
 
+// colors textfield border red or green depending on user input validity
+var update_textfield = function()
+{
+	var url_field = $('.event_url_field');
+	var event_url = url_field.val();
+		
+	if (!is_valid_url(event_url))
+	{
+		$('#link_field').addClass('has-error');
+	}
+	else
+	{
+		$('#link_field').removeClass('has-error');
+	    $('#link_field').addClass('has-success');
+	}
+	
+	if(event_url.length == 0)
+	{
+		$('#link_field').removeClass('has-error');
+	    $('#link_field').removeClass('has-success');	
+	}
+}
+
 // parse a FB event id from a url
 function event_id_from_url(url){
   var start_index = url.indexOf("/events/");
@@ -58,6 +81,10 @@ $(document).ready(function()
 		setTimeout(window.print(),500);
 	});
   
+  // give user visual feedback if they put in a good or bad url
+    $('#link_field').keypress(update_textfield);
+	$('#link_field').focusout(update_textfield);
+  
   // generate a printable flyer based on the provided event url and FB auth
 	$('.generate_button').click(function(){
 		var url_field = $('.event_url_field');
@@ -66,15 +93,9 @@ $(document).ready(function()
 		if (!is_valid_url(event_url))
 		{
 		  $('.event_url_field').tooltip('show');
-		  $('#link_field').addClass('has-error');
 		  console.log("zero");
 		  return;
-		}
-		else
-		{
-		  $('#link_field').removeClass('has-error');
-		}
-		
+		}		
 		
 		var event_id = event_id_from_url(event_url);
 

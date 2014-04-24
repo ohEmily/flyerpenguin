@@ -47,7 +47,7 @@ $(document).ready(function()
 	});
 
   // bring up browser print dialog
-	$('.print-modal').click(function(){
+	$('.print-button').click(function(){
 		setTimeout(window.print(),500);
 	});
   

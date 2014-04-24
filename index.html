@@ -103,16 +103,22 @@
 
     </div>
     
-    <div class="print-modal no-print">
-      <div class="print-modal-controls">
-        <img src="images/icon-print.png" alt="print flyer" class="print_button">
-        print flyer
-      </div>
-    </div>
-    
     <div id="overlay_wrapper" class="overlay_wrapper">
+      <div class="top-toolbar">
+        <div class="container">
+          <div class="row">
+            <button type="button" class="btn btn-default btn-md print-button">
+              <span class="glyphicon glyphicon-print"></span> Print
+            </button>
+
+            <button type="button" class="btn btn-default btn-md toggle-image">
+              <span class="glyphicon glyphicon-camera"></span> Toggle Image
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="overlay">
-        <div class="flyer_main"> 
+        <div class="flyer_main">
           <div class="flyer_when editable"></div>
           <div class="flyer_title editable"></div>
           <div class="flyer_image">

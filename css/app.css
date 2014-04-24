@@ -40,7 +40,7 @@ body
   margin: 20px 0;
 }
 
-h1 {
+.main_title {
 	font-size: 3.8em;
 	font-family: 'Tauri', Helvetica, Arial, sans-serif;
 	color: #fff;

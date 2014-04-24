@@ -30,7 +30,14 @@
 
     <script type="text/javascript">
       Aloha = {};
-      Aloha.settings = { sidebar: { disabled: true } };
+      Aloha.settings = {
+        sidebar: { disabled: true },
+        plugins: {
+          format: {
+              hotKey: {formatPre: 'alt+ctrl+p',}
+          }
+      }
+      };
     </script>
 
     <!-- load the Aloha Editor core and some plugins -->

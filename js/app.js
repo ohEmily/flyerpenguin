@@ -99,6 +99,7 @@ $(document).ready(function()
 
   // bring up browser print dialog
 	$('.print-button').click(function(){
+    $('.overlay').animate({ scrollTop: 0 }, 0);
 		setTimeout(window.print(),500);
 	});
   

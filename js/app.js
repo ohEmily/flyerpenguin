@@ -71,6 +71,11 @@ function create_overlay(fb_event){
     overlay_wrapper.slideUp('fast');
     $(".print-modal").hide();
   });
+
+  $('.close-flyer').click(function(){
+    overlay_wrapper.slideUp('fast');
+    $(".print-modal").hide();
+  });
 }
 
 

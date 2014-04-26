@@ -50,7 +50,7 @@ body
 p {
 	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-size: 1.1em;
-	color: #000;
+	color: #333;
 }
 
 .main_description{
@@ -62,10 +62,37 @@ p {
 	border-radius: 20px;
 }
 
-.toolbar_text
+.top-toolbar{
+  width:100%;
+  padding: 4px 0;
+  height: 44px;
+  z-index: 100;
+  position:absolute;
+  background: #f7f7f9;
+  box-shadow: 1px -2px 5px #000;
+}
+
+.top-toolbar .container{
+	width: 890px;
+	max-width:none;
+}
+
+.top-toolbar .btn{
+  margin-right:10px;
+}
+
+.toolbar-text
 {
-	font-weight: bold;
-	color: #eee;
+  margin-top:7px;
+}
+
+.top-toolbar p{
+  font-family: helvetica, arial, sans-serif;
+}
+
+.mini-logo{
+  width:37px;
+  margin-right:10px;
 }
 
 /** Form elements */

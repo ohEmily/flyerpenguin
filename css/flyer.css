@@ -119,12 +119,3 @@ body.flyer{
 .border-highlight{
    outline: #f4edc6 solid 5px !important;
 }
-
-.top-toolbar{
-  width:100%;
-  padding: 4px 0;
-  height: 44px;
-  z-index: 100;
-  position:absolute;
-  background: rgba(100,100,100,0.7);
-}

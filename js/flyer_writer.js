@@ -46,6 +46,8 @@ function write_event_image(cover){
     return;
   }
 
+  $('.flyer_image img').remove();
+
   $('.flyer_image').append('<img class="flyer_image_no_overlay" src="' + cover.source + '" alt="event image" />');
   
   // reduce opacity of flyer image if you hover over it

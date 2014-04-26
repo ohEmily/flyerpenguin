@@ -2,3 +2,7 @@
 {
 	display:none !important;
 }
+
+.aloha-editable-active, .aloha-editable-active[contenteditable=true]:focus{
+  outline: #fff solid 5px!important;
+}

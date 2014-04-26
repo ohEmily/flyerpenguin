@@ -83,11 +83,12 @@ p {
 
 .toolbar-text
 {
-  margin-top:7px;
+  margin-top:8px;
 }
 
 .top-toolbar p{
   font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
 }
 
 .mini-logo{

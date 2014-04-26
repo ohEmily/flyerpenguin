@@ -25,6 +25,7 @@ body.flyer{
 .flyer_image{
   max-height:400px;
   overflow: hidden;
+  margin-bottom:8px;
 }
 
 .flyer_image_overlay{

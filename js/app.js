@@ -77,6 +77,10 @@ function create_overlay(fb_event){
     overlay_wrapper.slideUp('fast');
     $(".print-modal").hide();
   });
+
+  $('.start-over').click(function(){
+    populate_overlay(fb_event);
+  });
 }
 
 

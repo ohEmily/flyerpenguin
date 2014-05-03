@@ -74,7 +74,16 @@ ASCII art from: http://www.retrojunkie.com/asciiart/animals/penguins.htm
         plugins: {
           format: {
               hotKey: {formatPre: 'alt+ctrl+p',}
-          }
+          },
+          alignment: {
+            config: [ 'right', 'left', 'center', 'justify' ],
+     
+            editables: {
+                '#one': [ 'right', 'left' ],
+                '#two': [ ],
+                '#three': [ 'left', 'right', 'top', 'middle', 'bottom' ]
+            }
+        }
       }
       };
     </script>
@@ -84,7 +93,8 @@ ASCII art from: http://www.retrojunkie.com/asciiart/animals/penguins.htm
                data-aloha-plugins="common/ui,
                         common/format,
                         common/list,
-                        common/link ">
+                        common/link,
+                        common/align ">
     </script>
      
     <!-- load the Aloha Editor CSS styles -->

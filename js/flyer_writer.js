@@ -2,7 +2,7 @@
 function populate_overlay(fb_event){
 
   var flyer_title = wrap_in_p_tag(fb_event.name);
-  var flyer_where = wrap_in_p_tag(fb_event.location);
+  var flyer_where = wrap_in_p_tag(fb_event.place.name);
 
   var start_time = fb_date_time_to_human(fb_event.start_time);
   var flyer_when = wrap_in_p_tag(start_time);
